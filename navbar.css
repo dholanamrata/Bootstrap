@@ -1,0 +1,36 @@
+body{
+    margin-top: 5px;
+}
+
+.textcolor{
+    color: white !important ;
+}
+.header {
+    height: 100vh;
+  }
+
+
+  .card-div::after {
+	content: "";
+	border-radius: 5px;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: $box-shadow-bottom-heavy;
+	opacity: 0;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+.card-div:hover {
+	-webkit-transform: scale(1.05, 1.05);
+	transform: scale(1.05, 1.05);
+}
+
+.card-div:hover::after {
+	opacity: 1;
+}
+  
